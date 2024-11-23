@@ -6,3 +6,5 @@ OBS: Se o código está bem escrito eu não sei, mas sei que funciona. Eu nunca 
 muito sobre a linguagem. Esse projeto foi um teste para ver como a linguagem funciona e aprender na prática.
 
 Irei refatorá-lo quando aprender mais sobre a linguagem e seus frameworks. (:
+
+Se deseja executá-lo na sua máquina saiba que ele depende do ffmpeg.
