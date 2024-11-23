@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <link rel="stylesheet" href="./static/styles.css">
+      <title>MP3 DOWNLOADER TESTE</title>
+   </head>
+   <body>
+      <h1>MP3 Downloader</h1>
+      <p>Faça o download no formato MP3 de qualquer vídeo do YouTube!</p>
+
+      <form id="download-form">
+         <div class="box">
+            <label for="link">Digite o link do vídeo:</label>
+            <input type="text" id="link" name="link" placeholder="https://youtu.be">
+            <button type="submit">Download</button>
+         </div>
+      </form>
+      <p class="message" id="message"></p>
+      <div class="box hidden" id="download-link">
+         <a id="file-link" href="#" download>Salvar MP3</a>
+      </div>
+
+      <script src="./static/script.js"></script>
+   </body>
+</html>
