@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+/*
+   font-family: "Comic Neue", cursive;
+   font-weight: normal, bold;
+   font-style: italic;
+*/
+
 * {
    margin: 0;
    padding: 0;
@@ -7,63 +14,74 @@
 }
 
 html {
-   font-size: 62.5%;
+   font-size: 62.5%; /* = 10px */
 }
 
 body {
-   font: normal 400 1.6rem/1.2 arial, helvetica, sans-serif;
-   padding: 5rem 1rem;
+   font: normal bold 2.16rem/1.2 "Comic Neue", cursive;
+   padding: 8.5rem 2rem 1rem 2rem;
+   color: #000000;
 }
+
+/* CONTENT
+===================================================================================== */
 
 h1 {
    text-align: center;
-   font-size: 2.8rem;
-   font-weight: bold;
-   padding-bottom: 2.5rem;
+   font-size: 5.4rem;
+   padding-bottom: 7rem;
+}
+
+h1 > span {
+   display: block;
+   font-size: 0.4em;
 }
 
 p {
    text-align: center;
-   padding-bottom: 5rem;
+   padding-bottom: 6rem;
 }
 
-label, input, button, a[download] {
-   display: block;
-}
-
-input {
-   margin-top: 1rem;
-   background-color: #cecece;
-   padding: 0.8rem;
-   border-radius: 0.5rem;
-   width: 100%;
-   max-width: 50rem;
-}
-
-.box {
+form {
    margin: 0 auto;
    max-width: 50rem;
 }
 
-button, a[download] {
-   margin-top: 1.2rem;
-   padding: 0.8rem;
-   border-radius: 0.5rem;
-   color: white;
+label, input, button, a[download] {
+   display: block;
+   border-radius: 1.2rem;
+   cursor: pointer;
+}
+
+label{
+   padding: 1rem 0.2rem;
+}
+
+input {
+   background-color: #cecece;
+   padding: 1.2rem 1rem;
    width: 100%;
-   max-width: 50rem;
-   background-color: #4d5efa;
+}
+
+button {
+   margin-top: 2rem;
+   padding: 1.2rem 1rem;
+   width: 100%;
+   background-color: #49a7ff;
 }
 
 a[download] {
+   margin: 0 auto;
+   padding: 1.2rem 1rem;
+   width: 100%;
+   max-width: 50rem;
    text-align: center;
-   color: black;
    text-decoration: none;
-   margin: 0;
+   color: #000000;
    background-color: #75ff75;
 }
 
-.hidden {
+a.hidden {
    display: none;
 }
 

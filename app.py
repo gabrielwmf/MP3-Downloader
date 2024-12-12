@@ -30,27 +30,16 @@ def process_download():
    try:
       # Fazer o download
       file_name = downloader(link, TMP_SAVE_PATH)
+      file_path = os.path.join(TMP_SAVE_PATH, f"{file_name}.mp3")
 
-      # Retornar link para o usuário solicitar o download
-      return jsonify({"message": "Download concluído!", "download_url": f"/tmp/{file_name}.mp3", "filename": f"{file_name}.mp3"}), 200
-   except Exception as e:
-      return jsonify({"error": str(e)}), 500
-
-# Rota para servir o arquivo MP3 temporário e excluí-lo após o download
-@app.route("/tmp/<filename>")
-def serve_and_delete_file(filename):
-   file_path = os.path.join(TMP_SAVE_PATH, filename)
-
-   if not os.path.exists(file_path):
-      return jsonify({"error": "Arquivo não encontrado."}), 404
-
-   # Enviar o arquivo e programar exclusão
-   try:
+      # Enviar o arquivo
       response = send_file(file_path, as_attachment=True)
-      os.remove(file_path)  # Excluir após envio
+      os.remove(file_path)
+
       return response
+
    except Exception as e:
       return jsonify({"error": str(e)}), 500
 
 if __name__ == "__main__":
-   app.run(host="10.0.0.104", port=3000)
+   app.run(debug=True)

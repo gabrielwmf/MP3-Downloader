@@ -1,28 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      <link rel="stylesheet" href="./static/styles.css">
-      <title>MP3 DOWNLOADER TESTE</title>
-   </head>
-   <body>
-      <h1>MP3 Downloader</h1>
-      <p>Faça o download no formato MP3 de qualquer vídeo do YouTube!</p>
+    <link rel="stylesheet" href="./static/styles.css">
+    <script src="./static/script.js" defer></script>
 
-      <form id="download-form">
-         <div class="box">
-            <label for="link">Digite o link do vídeo:</label>
-            <input type="text" id="link" name="link" placeholder="https://youtu.be">
-            <button type="submit">Download</button>
-         </div>
-      </form>
-      <p class="message" id="message"></p>
-      <div class="box hidden" id="download-link">
-         <a id="file-link" href="#" download>Salvar MP3</a>
-      </div>
+    <title>YouTube Downloader</title>
+  </head>
+  <body>
+    <h1>YouTube <span>áudio downloader</span></h1>
+    <p>Formato ( .mp3 )</p>
 
-      <script src="./static/script.js"></script>
-   </body>
+    <form data-form>
+      <label for="link">Insira o link:</label>
+      <input type="url" id="link" name="link" placeholder="https://youtu.be" required>
+      <button type="submit">Baixar</button>
+    </form>
+
+    <p class="message" data-message></p>
+
+    <a href="#" download class="hidden" data-link="download">Salvar</a>
+  </body>
 </html>
